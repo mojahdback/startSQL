@@ -7,7 +7,7 @@ CREATE DATABASE hospitalmanagement;
 -- TABLE: departments
 CREATE TABLE departments (
     department_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL UNIQUE,
+    department_name VARCHAR(100) NOT NULL UNIQUE,
     location VARCHAR(100)
 );
 
@@ -57,7 +57,7 @@ CREATE TABLE admissions (
     admission_date DATE,
     discharge_date DATE,
     FOREIGN KEY (patient_id) REFERENCES patients(patient_id),
-     FOREIGN KEY (room_id) REFERENCES rooms(room_id)
+    FOREIGN KEY (room_id) REFERENCES rooms(room_id)
 
 );
 
