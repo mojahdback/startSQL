@@ -80,3 +80,11 @@ WHERE email IS NULL OR email = '';
 
 DELETE FROM appointments
 WHERE appointment_date < '2024-01-01';
+
+-- 18. UPDATE - Change Oncology → Cancer Treatment
+--------------------------------------------------------
+UPDATE departments
+SET name = 'Cancer Treatment'
+WHERE name = 'Oncology';
+
+
