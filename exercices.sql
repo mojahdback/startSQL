@@ -36,6 +36,20 @@ SELECT * FROM doctors WHERE specialization = 'Cardiologist' OR specialization = 
 
 SELECT * FROM admissions WHERE admission_date BETWEEN '2024-12-01' AND '2024-12-07';
 
+-- 9. Conditional Expressions - Age Categories
+
+SELECT 
+    first_name,
+    last_name,
+    date_of_birth,
+    YEAR(CURDATE()) - YEAR(date_of_birth) AS age,
+    CASE
+        WHEN (YEAR(CURDATE()) - YEAR(date_of_birth)) < 18 THEN 'Enfant'
+        WHEN (YEAR(CURDATE()) - YEAR(date_of_birth)) BETWEEN 18 AND 60 THEN 'Adult'
+        ELSE 'Senior'
+    END AS age_category
+FROM patients;
+
 -- Exercice 10: COUNT 
 
 SELECT COUNT(*) AS total_appointments
