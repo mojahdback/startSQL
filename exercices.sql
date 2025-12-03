@@ -12,6 +12,10 @@ SELECT * FROM departments;
 SELECT * FROM patients
 ORDER BY date_of_birth ASC;
 
+-- Exercice 4 : Filtrer les patients uniques par sexe (DISTINCT)
+SELECT DISTINCT gender FROM patients;
+
+
 -- Exercice 5 : LIMIT Clause
 
 SELECT * FROM doctors
