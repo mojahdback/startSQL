@@ -87,4 +87,11 @@ UPDATE departments
 SET name = 'Cancer Treatment'
 WHERE name = 'Oncology';
 
+-- 19. HAVING - Gender with at least 2 patients
+
+SELECT gender, COUNT(*) AS total
+FROM patients
+GROUP BY gender
+HAVING COUNT(*) >= 2;
+
 
