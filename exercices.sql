@@ -18,3 +18,10 @@ SELECT * FROM doctors
 ORDER BY doctor_id ASC
 LIMIT 3;
 
+-- Exercice 6 : WHERE Clause
+
+SELECT * FROM patients WHERE date_of_birth > 2000-12-30;
+
+
+
+
