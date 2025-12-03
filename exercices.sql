@@ -62,9 +62,8 @@ FROM patients;
 
 -- 13. MAX - Most recent appointment
 
-SELECT * FROM appointments
-ORDER BY appointment_date DESC, appointment_time DESC
-LIMIT 1;
+SELECT MAX(appointment_date) AS oldest
+FROM appointments;
 
 -- 14. SUM - Total admissions per room
 
@@ -72,3 +71,7 @@ SELECT room_id, COUNT(*) AS total_admissions
 FROM admissions
 GROUP BY room_id;
 
+-- 15. IS NULL - Patients without email
+
+SELECT * FROM patients
+WHERE email IS NULL OR email = '';
