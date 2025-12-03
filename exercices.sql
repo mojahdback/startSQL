@@ -55,6 +55,13 @@ FROM patients;
 SELECT COUNT(*) AS total_appointments
 FROM appointments;
 
+-- Exercice 11: COUNT avec GROUP BY
+
+SELECT dep.department_name AS department, COUNT(*) AS doctor_count
+FROM doctors d
+JOIN departments dep ON d.department_id = dep.department_id
+GROUP BY dep.department_name;
+
 -- Exercice 12: Average patient age
 
 SELECT AVG(YEAR(CURDATE()) - YEAR(date_of_birth)) AS average_age
