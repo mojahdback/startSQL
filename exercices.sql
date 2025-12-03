@@ -23,5 +23,7 @@ LIMIT 3;
 SELECT * FROM patients WHERE date_of_birth > 2000-12-30;
 
 
+-- Exercice 7 : Logical Operators
 
+SELECT * FROM doctors WHERE specialization = 'Cardiologist' OR specialization = 'Neurologist';
 
