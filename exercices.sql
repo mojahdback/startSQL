@@ -11,3 +11,10 @@ SELECT * FROM departments;
 
 SELECT * FROM patients
 ORDER BY date_of_birth ASC;
+
+-- Exercice 5 : LIMIT Clause
+
+SELECT * FROM doctors
+ORDER BY doctor_id ASC
+LIMIT 3;
+
