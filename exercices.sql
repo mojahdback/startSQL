@@ -41,4 +41,11 @@ SELECT * FROM admissions WHERE admission_date BETWEEN '2024-12-01' AND '2024-12-
 SELECT COUNT(*) AS total_appointments
 FROM appointments;
 
--- 
+-- 13. MAX - Most recent appointment
+
+SELECT * FROM appointments
+ORDER BY appointment_date DESC, appointment_time DESC
+LIMIT 1;
+
+
+
