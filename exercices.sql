@@ -35,3 +35,10 @@ SELECT * FROM doctors WHERE specialization = 'Cardiologist' OR specialization = 
 -- Exercice 8 : Special Operators
 
 SELECT * FROM admissions WHERE admission_date BETWEEN '2024-12-01' AND '2024-12-07';
+
+-- Exercice 10: COUNT 
+
+SELECT COUNT(*) AS total_appointments
+FROM appointments;
+
+-- 
