@@ -27,3 +27,7 @@ SELECT * FROM patients WHERE date_of_birth > 2000-12-30;
 
 SELECT * FROM doctors WHERE specialization = 'Cardiologist' OR specialization = 'Neurologist';
 
+
+-- Exercice 8 : Special Operators
+
+SELECT * FROM admissions WHERE admission_date BETWEEN '2024-12-01' AND '2024-12-07';
