@@ -75,3 +75,8 @@ GROUP BY room_id;
 
 SELECT * FROM patients
 WHERE email IS NULL OR email = '';
+
+-- 17. DELETE - Delete appointments before 2024
+
+DELETE FROM appointments
+WHERE appointment_date < '2024-01-01';
