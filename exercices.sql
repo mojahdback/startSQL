@@ -47,5 +47,9 @@ SELECT * FROM appointments
 ORDER BY appointment_date DESC, appointment_time DESC
 LIMIT 1;
 
+-- 14. SUM - Total admissions per room
 
+SELECT room_id, COUNT(*) AS total_admissions
+FROM admissions
+GROUP BY room_id;
 
