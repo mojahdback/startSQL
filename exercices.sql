@@ -55,6 +55,11 @@ FROM patients;
 SELECT COUNT(*) AS total_appointments
 FROM appointments;
 
+-- Exercice 12: Average patient age
+
+SELECT AVG(YEAR(CURDATE()) - YEAR(date_of_birth)) AS average_age
+FROM patients;
+
 -- 13. MAX - Most recent appointment
 
 SELECT * FROM appointments
